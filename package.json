@@ -1,0 +1,33 @@
+{
+  "name": "companies-task",
+  "version": "1.0.0",
+  "description": "Full-stack Companies API with React frontend and Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend:dev": "cd frontend/react-vite-app && npm run dev",
+    "frontend:start": "cd frontend/react-vite-app && npm run preview",
+    "backend:install": "cd backend && npm install",
+    "frontend:install": "cd frontend/react-vite-app && npm install",
+    "install:all": "npm run backend:install && npm run frontend:install",
+    "build": "cd frontend/react-vite-app && npm run build",
+    "setup": "npm run install:all && echo 'Setup complete! Create .env file in backend folder with your MongoDB URI.'"
+  },
+  "keywords": [
+    "nodejs",
+    "react",
+    "mongodb",
+    "express",
+    "typescript",
+    "companies",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
